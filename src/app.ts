@@ -1,6 +1,7 @@
 import cors from 'cors';
 import express, { Application, NextFunction, Request, Response } from 'express';
 import httpStatus from 'http-status';
+import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import router from './app/routes';
 
 // routes
@@ -15,6 +16,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // application routes
 app.use('/api/v1', router);
+
+// global error handler
+app.use(globalErrorHandler);
 
 // test route
 // TODO: remove after checking the app
