@@ -9,3 +9,7 @@ It's a express.js modular boilerplate.
 - MongoDB
 - Mongoose
 - Zod
+
+## upcoming
+
+- add logging with winston
